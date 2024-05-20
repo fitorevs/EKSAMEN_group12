@@ -13,7 +13,7 @@ export async function fetchUserData (user_id) {
         }
     }`, {user_id})
     
-    console.log("hello")
+    //console.log("hello") Console.log for å se om koden kjører fra andre steder, brukt for å søke etter login feil
     return data[0]
 }
 
