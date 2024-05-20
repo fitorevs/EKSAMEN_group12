@@ -2,9 +2,9 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { FaHeart, FaStar, FaUserFriends } from "react-icons/fa"
-import { fetchUserData } from "../../sanity/services/userServices"
 import { authenticate } from "./AuthenticateUser"
 import MovieCard from "./MovieCard"
+import { fetchUserData } from "../../sanity/services/userServices"
 
 export default function Frontpage() {
     authenticate()

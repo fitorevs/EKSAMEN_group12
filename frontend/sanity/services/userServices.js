@@ -13,6 +13,7 @@ export async function fetchUserData (user_id) {
         }
     }`, {user_id})
     
+    console.log("hello")
     return data[0]
 }
 
@@ -22,6 +23,7 @@ export async function fetchUserData (user_id) {
 export async function createUser (user) {    
     const newUser = {
         _type: 'user',
+        _id: user.email.replace("@", "").replace(".", ""),
         username: user.username,
         email: user.email,
         password: user.password,
@@ -30,7 +32,7 @@ export async function createUser (user) {
         favGenres: []
     }
 
-    await writeClient.create(newUser)
+    await writeClient.createIfNotExists(newUser)
 }
 
 //Funksjon for å fetche logged inn bruker og andre bruker vi trykte på for å videre sammenligne deres filmer og sjangere, bruker slug som id

@@ -13,7 +13,8 @@ export const authenticate = (goto = "") => {
     /* Linje 14 til 19: Undersøke om identificator er i localStorage, altså at brukeren er logget in. */
     if (localStorage.getItem("identificator") !== null) {
         /* Linje 16: Sett riktig verdi for identificator, true hvis innlogget. */
-        hasIdentificator = !!hasIdentificator //value == true, no value == false
+        const identificator = localStorage.getItem("identificator")
+        hasIdentificator = !!identificator //value == true, no value == false
 
     }
 

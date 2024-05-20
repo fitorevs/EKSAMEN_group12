@@ -24,7 +24,7 @@ export default function LoginUser() {
         const users = await client.fetch('*[_type == "user"]')
         /* Linje 26: Bruk metoden find mot arrayen users. Hvert element blir tilgjengelig/presentert i thisUser argumentet, så vi kan undersøke email og passord mot det. Hvis brukeren vår finnes blant alle brukerene blir userSearch sann (true). */
         const userSearch = users.find((thisUser) => thisUser.username == user.username && thisUser.password == user.password)
-        /* Linje 28 til 34: Finnes brukeren ønsker vi å lagre deres Sanity ID i localStarge med navnet identificator. For å være ryddig fjerner vi all data fra formen, selv om det er litt overflødig. Deretter kan vi sende brukeren til frontpage. */
+        /* Linje 28 til 34: Finnes brukeren ønsker vi å lagre deres Sanity ID i localStarge med navnet identificator. For å være ryddig fjerner vi all data fra formen, selv om det er litt overflødig. Deretter kan vi sende brukeren til frontpage. */ 
         if (userSearch !== undefined) {
             const identificator = userSearch._id
             localStorage.setItem("identificator", identificator)
