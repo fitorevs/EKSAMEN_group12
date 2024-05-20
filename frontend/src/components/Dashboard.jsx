@@ -38,7 +38,7 @@ export default function Dashboard() {
             arrayToMap?.map((thisItem) => {
                 if (arrayToCompare?.find(match => match.name === thisItem.name)) {
                     const whoF = toParse.thisUser.favMovies?.map(movie => movie._id).includes(thisItem._id) ? toParse.thisUser.username : toParse.otherUser.username
-                    const whoW = toParse.thisUser.wishedMovies?.map(movie => movie._id).includes(thisItem._id) ? toParse.thisUser.username : toParse.otherUser.username
+                    const whoW = whoF === toParse.thisUser.username ? toParse.otherUser.username : toParse.thisUser.username
                     arrayWithMatches.push({_id: thisItem._id, name: thisItem.name, coverURL: thisItem.coverURL, IMDBURL: thisItem.IMDBURL, favedBy: whoF, wishedBy: whoW})
                 }
             })
@@ -113,9 +113,10 @@ export default function Dashboard() {
                         name={thisMovie.name}
                         coverURL={thisMovie.coverURL}
                         IMDBURL={thisMovie.IMDBURL} 
-                        key = {`mam${index}`} />
-                    /*<p>Favoritt til: {thisMovie.favedBy}</p>
-                    <p>I ønskeliste til: {thisMovie.wishedBy}</p>*/
+                        key = {`mam${index}`} 
+                        favedBy = {thisMovie.favedBy}
+                        wishedBy = {thisMovie.wishedBy}
+                        />
                 )}
                 </section>
             </section>
