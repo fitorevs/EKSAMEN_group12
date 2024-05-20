@@ -13,9 +13,8 @@
     // Plasserer modalen fast på skjermen, justert etter vinduets størrelse
     position: fixed; // Fester modalen på skjermen
     top: 30%; // Plasserer modalen 30% ned fra toppen av vinduet
-    left: 50%; // Plasserer modalen 50% inn fra venstre kant av vinduet
  
-    
+    /* Resten av kode er egen, dette er hentet fra: https://css-tricks.com/quick-css-trick-how-to-center-an-object-exactly-in-the-center/ */
     transform: translate(-50%, -50%); // Sentraliserer modalen på X- og Y-aksen
 
     border-color: $mulberry;
