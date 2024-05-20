@@ -86,7 +86,7 @@ export default function Dashboard() {
                 <section>
                     <span><FaCouch /> <p>Go safe!</p></span>
                     <p className="info">Dere har {data?.countFL} {data?.countFL === 1 ? "film" : "filmer"} felles i favorittlisten deres. </p>
-                    {data?.sharedWishlist?.map((thisMovie, index) =>
+                    {data?.sharedFavorites?.map((thisMovie, index) =>
                      <MovieCard key = {`gs${index}`}
                      name={thisMovie.name}
                      coverURL={thisMovie.coverURL}
