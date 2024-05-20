@@ -1,0 +1,192 @@
+// Media query for skjermer med en maksimal bredde på 840px
+@media (max-width: 840px) {
+    nav {
+        a {
+            img {
+                // Skjuler bilder inne i lenker i nav-elementet når skjermbredden er 840px eller mindre
+                display: none;
+            }
+        }
+    }
+
+    #genres {
+        section {
+            // Setter bredden til section-elementer inne i #genres til 40% når skjermbredden er 840px eller mindre
+            flex-basis: 40%;
+        }
+    }
+}
+// Media query for skjermer med en maksimal bredde på 750px
+@media (max-width: 750px) {
+    nav {
+        // Endrer flex-flow til kolonneoppsett for nav-elementet når skjermbredden er 750px eller mindre
+        flex-flow: column;
+
+        ul {
+            // Endrer flex-flow til kolonneoppsett for ul-elementer inne i nav
+            flex-flow: column;
+            // Sentraliserer ul-elementet horisontalt
+            margin: auto;
+            // Legger til margin nederst på ul-elementet
+            margin-bottom: 1rem;
+            // Fjerner gap mellom elementene i ul
+            gap: 1ram;
+            // Fjerner padding fra ul-elementet
+            padding: 0;
+        }
+    }
+
+    #genres {
+        // Endrer flex-flow til kolonneoppsett for #genres
+        flex-flow: column;
+
+        section {
+            // Setter bredden til section-elementer inne i #genres til 100%
+            flex-basis: 100%;
+            // Setter bredden til section-elementer inne i #genres til 80%
+            width: 80%;
+        }
+    }
+}
+
+// Media query for skjermer med en maksimal bredde på 680px
+@media (max-width: 680px) {
+    h2 {
+        // Setter skriftstørrelsen til verdien av variabelen $fontSize-medium
+        // !important brukes for å overstyre andre mindre spesifikke regler
+        font-size: $fontSize-medium;
+    }
+    // P-elementer på skjermer med maksimal bredde på 908px
+    p {
+        // Setter skriftstørrelsen til verdien av variabelen $fontSize-small
+        // !important brukes for å overstyre andre mindre spesifikke regler
+        font-size: $fontSize-small;
+    }
+
+    #frontpage, #dashboard, #searchpage{
+        // Endrer flex-flow til kolonneoppsett for #frontpage, #dashboard og #searchpage når skjermbredden er 680px eller mindre
+        flex-flow: column;
+
+        h2 {
+            // Venstrejusterer h2-elementet
+            text-align: left;
+            // Fjerner margin rundt h2-elementet
+            margin: 0;
+            // Legger til margin til venstre på h2-elementet
+            margin-left: 2rem;
+            // Legger til margin nederst på h2-elementet
+            margin-bottom: 1rem;
+        }
+
+        section.extendedBox {
+            width: 80%;
+
+            button {
+                margin-right: 3rem;
+            }
+
+        }
+
+        section {
+            span {
+                // Legger til margin til venstre på span-elementer inne i section
+                margin-left: 2rem;
+            }
+
+            ul {
+                // Setter bredden til ul-elementer inne i section til 70%
+                width: 70%;
+                // Sentraliserer ul-elementet horisontalt
+                margin: auto;
+            }
+
+            p {
+                // Setter skriftstørrelsen til p-elementer inne i section til fontSize-small variabelen
+                font-size: $fontSize-small;
+            }
+
+            li {
+                // Setter skriftstørrelsen til li-elementer inne i section til fontSize-small variabelen
+                font-size: $fontSize-small;
+            }
+        }
+    }
+
+    #extension {
+    // Section-elementer innenfor #extension
+        section {
+            // Endrer flex-flow til kolonneoppsett for section-elementer inne i #extension
+            flex-flow: column;
+
+            // Span-elementer innenfor section-elementer inne i #extension
+            span {
+                // Setter venstre margin til 2rem
+                margin-left: 2rem;
+            }
+        }
+
+        // Paragraf-elementer med klassen "info" innenfor #extension
+        p.info {
+            // Justerer tekst til venstre
+            text-align: left;
+        }
+    }
+
+    // CSS-regler for elementer med IDene "frontpage", "dashboard", "extension", "genres" og "searchpage"
+    #frontpage, #dashboard, #extension, #genres, #searchpage {
+        // Elementer med klassen "title" innenfor de nevnte IDene
+        .title, h2 {
+            // Justerer tekst til venstre
+            text-align: left;
+            // Setter venstre margin til 2rem
+            margin: 2rem;
+  
+        }
+
+        // Elementer med klassen "info" innenfor de nevnte IDene
+        .info {
+            // Legger til margin på alle sider
+            margin-left: 2rem;
+        }
+    }
+
+    .card {
+        // Setter bredden til .card-elementer til 70%
+        width: 70%;
+        // Sentraliserer .card-elementene horisontalt
+        margin: auto;
+        // Legger til margin nederst på .card-elementene
+        margin-bottom: 1.5rem;
+
+        h2 {
+            font-size: $fontSize-medium;
+            text-align: center !important;
+        }
+
+        img {
+            // Setter bredden til img-elementer inne i .card til 60%
+            width: 60%;
+        }
+    }
+
+    #logo {
+        h2 {
+            // Setter skriftstørrelsen til verdien av variabelen $fontSize-xlarge
+            // !important brukes for å overstyre andre mindre spesifikke regler
+            font-size: $fontSize-xlarge !important;
+        }
+    }
+
+    #searchpage {
+        form {
+            // Setter bredden til form-elementer inne i #searchpage til 90%
+            width: 90%;
+            // Sentraliserer form-elementene horisontalt
+            margin: 1rem auto;
+        }
+        // Setter bredden til input-elementet med id #findMovie til 39%
+        input#findMovie {
+            width: 39%;
+        }
+    }
+}

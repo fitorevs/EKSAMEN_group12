@@ -1,0 +1,58 @@
+// Stiler for #user-seksjonen
+#user {
+    // Stiler for h2-elementer inne i #user-seksjonen
+    h2 {
+        display: flex;
+        font-size: $fontSize-large;
+        color: $steelBlue;
+        justify-content: center;
+        padding: 1rem;
+        text-transform: uppercase;
+    }
+    // Stiler for form-elementer inne i #user-seksjonen
+    form {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        // Stiler for span-elementer inne i form-elementet
+        span {
+            margin: auto;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding-top: 1rem;
+        }
+         // Stiler for input-elementer inne i form-elementet
+        input {
+            margin: auto;
+        }
+    }
+
+}
+
+// Stiler for #buttonContainer-seksjonen
+#buttonContainer {
+    padding: 2rem 0;
+
+    // Stiler for button-elementer inne i #buttonContainer-seksjonen
+    button {
+        all: unset;
+        padding: 1rem;
+        background-color: $yinMnBlue;
+        border-style: none;
+        color: $white;
+        font-weight: $fontWeight;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+    // Stiler for button-elementer når musepekeren er over dem
+    button:hover {
+        background-color: $steelBlue;
+    }
+}

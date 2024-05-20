@@ -1,0 +1,11 @@
+// Stiler for hele dokumentet
+body {
+    font-family: $fontFamily; // Bruker en variabel for skrifttypen
+    font-weight: $fontWeight; // Bruker en variabel for skriftvekten
+}
+
+// Stiler for hovedinnholdet
+main {
+    width: 100%; // Bredden er satt til 100%
+    background-color: $white; // Bakgrunnsfargen er hvit
+}
