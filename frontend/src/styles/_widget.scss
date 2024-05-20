@@ -15,6 +15,7 @@
     top: 30%; // Plasserer modalen 30% ned fra toppen av vinduet
  
     /* Resten av kode er egen, dette er hentet fra: https://css-tricks.com/quick-css-trick-how-to-center-an-object-exactly-in-the-center/ */
+    left: 50%;
     transform: translate(-50%, -50%); // Sentraliserer modalen på X- og Y-aksen
 
     border-color: $mulberry;
