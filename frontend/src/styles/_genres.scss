@@ -1,0 +1,61 @@
+// Stiler for #genres-seksjonen
+#genres {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+     // Stiler for .title-klassen inne i #genres-seksjonen
+    .title {
+        flex-basis: 100%;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: $fontWeight;
+        font-size: $fontSize-large;
+        padding: 1rem;
+        margin: 1.5rem 0;
+    }
+    // Legger til mellomrom mellom flex-elementene
+    gap: 0.5rem;
+    // Stiler for section-elementer inne i #genres-seksjonen
+    section {
+        flex-basis: 25%;
+        margin: 1rem;
+        padding: 0.5rem;
+        padding-bottom: 1.5rem;
+        text-align: center;
+
+        background-color: $platinum;
+        color: $steelBlue;
+        border-radius: 10px;
+
+        // Kilde: https://m3.material.io/
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        border-color: $powderBlue;
+        border-style: solid;
+        border-width: medium;
+         // Stiler for h2-elementer inne i section-elementet
+        h2 {
+            font-weight: $fontWeight;
+            font-size: $fontSize-medium;
+            color: $yinMnBlue;
+            text-transform: uppercase;
+            text-decoration: underline;
+            text-align: center;
+        }
+        // Stiler for a-elementer inne i section-elementet
+        a {
+            text-decoration: none;
+        }
+    }
+    // Stiler for button-elementer inne i #genres-seksjonen
+    button {
+        all: unset;
+        display: flex;
+        align-items: center;
+        margin-left: 1rem;
+        gap: 0.5rem;
+        cursor: pointer;
+    }
+}

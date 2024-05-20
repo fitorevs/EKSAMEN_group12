@@ -1,0 +1,336 @@
+.card {
+    // Setter bakgrunnsfarge til kortet
+    background-color: $platinum;
+    // Sentrerer teksten i kortet
+    text-align: center;
+    // Legger til margin rundt kortet
+    margin: 0.5rem;
+    // Legger til padding innenfor kortet
+    padding: 0.5rem;
+    // Legger til margin nederst på kortet
+    margin-bottom: 1.5rem;
+    // Gjør hjørnene på kortet avrundede
+    border-radius: 10px;
+    // Setter bredden på kortet til 70%
+    width: 70%;
+
+    // Legger til skyggeeffekt for kortet (kilde: https://m3.material.io/)
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+    a {
+        // Fjerner understrekning fra lenker
+        text-decoration: none;
+    }
+
+    h2 {
+        // Setter skriftvekten til fontWeight variabelen
+        font-weight: $fontWeight;
+        // Setter skriftstørrelsen til fontSize-small variabelen
+        font-size: $fontSize-medium;
+        // Setter tekstfargen til yinMnBlue
+        color: $yinMnBlue;
+        // Legger til padding rundt h2-elementet
+        padding: 1rem;
+        // Sentrerer teksten i h2-elementet
+        text-align: center;
+    }
+
+    img {
+        // Setter bredden på bildet til 80%
+        width: 80%;
+        // Bevarer bildets proporsjoner
+        height: auto;
+        // Gjør hjørnene på bildet avrundede
+        border-radius: 20px;
+        // Legger til padding rundt bildet
+        padding: 1rem;
+    }
+}
+
+#frontpage, #dashboard {
+    // Setter display-egenskapen til flex for fleksibel layout
+    display: flex;
+    // Angir at flex-elementene skal pakkes inn ved behov
+    flex-flow: row wrap;
+    // Justerer innholdet til venstre
+    justify-content: left;
+
+    h2 {
+        // Setter bredden til h2-elementet til å dekke hele linjen
+        flex-basis: 100%;
+        // Sentraliserer h2-elementet horisontalt
+        margin: auto;
+        // Setter skriftvekten til fontWeight variabelen
+        font-weight: $fontWeight;
+        // Setter skriftstørrelsen til fontSize-medium variabelen
+        font-size: $fontSize-medium;
+    }
+
+    ul {
+        // Setter bakgrunnsfarge til ul-elementet
+        background-color: $powderBlue;
+        // Gjør hjørnene på ul-elementet avrundede
+        border-radius: 10px;
+        // Legger til margin rundt ul-elementet
+        margin: 0.5rem;
+        // Legger til padding innenfor ul-elementet
+        padding: 0.5rem;
+        // Setter bredden på ul-elementet til 65%
+        width: 65%;
+
+        // Legger til skyggeeffekt for ul-elementet (kilde: https://m3.material.io/)
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        
+        li {
+            // Legger til margin til venstre for li-elementet
+            margin-left: 1rem;
+            // Setter skriftstørrelsen til fontSize-small variabelen
+            font-size: $fontSize-small;
+            // Setter skriftfargen til hvit
+            color: $white;
+
+            p {
+                // Viser p-elementet som inline-block
+                display: inline-block;
+                // Legger til margin rundt p-elementet
+                margin: 0.3rem;
+                // Setter skriftfargen til hvit
+                color: $white;
+            }
+        }
+    }
+}
+
+#frontpage, #dashboard, #extension, #searchpage, #genres, #genrepage {
+    // Legger til padding rundt disse elementene
+    padding: 1.5rem;
+
+    .title {
+        // Setter teksten til store bokstaver
+        text-transform: uppercase;
+        // Sentrerer teksten
+        text-align: center;
+        // Legger til margin på toppen og bunnen
+        margin: 1.5rem 0;
+        // Setter skriftstørrelsen til fontSize-large variabelen
+        font-size: $fontSize-large;
+    }
+
+    span {
+        // Setter display-egenskapen til flex for fleksibel layout
+        display: flex;
+        // Justerer innholdet til å være sentrert vertikalt
+        align-items: center;
+        // Setter gap mellom flex-elementene
+        gap: 0.3rem;
+        // Setter skriftstørrelsen til fontSize-medium variabelen
+        font-size: $fontSize-medium;
+    }
+
+    .info {
+        // Setter skriftstørrelsen til fontSize-small variabelen
+        font-size: $fontSize-small;
+        // Setter skriftvekten til initial (standard)
+        font-weight: initial;
+    }
+}
+
+#frontpage {
+    span {
+        // Setter skriftstørrelsen til fontSize-small variabelen
+        font-size: $fontSize-small;
+    }
+}
+
+#frontpage, #dashboard {
+    section {
+        // Setter bredden til section-elementet til 30%
+        flex-basis: 30%;
+    }
+}
+
+#extension {
+    // Setter bakgrunnsfargen til extension-elementet
+    background-color: $smoke;
+    // Setter bredden til auto (automatisk justering)
+    width: auto;
+
+    section {
+        // Setter display-egenskapen til flex for fleksibel layout
+        display: flex;
+        // Angir at flex-elementene skal pakkes inn ved behov
+        flex-flow: row wrap;
+        // Legger til gap mellom flex-elementene
+        gap: 0.5rem;
+        // Justerer innholdet til å være sentrert vertikalt
+        align-items: center;
+        // Sentraliserer innholdet horisontalt
+        justify-content: center;
+    }
+
+    article {
+        // Setter bredden til article-elementet til 25%
+        flex-basis: 25%;
+        // Sentraliserer article-elementet horisontalt
+        margin: 1rem;
+    }
+
+    p.info {
+        // Sentrerer teksten i p-elementer med klassen "info"
+        text-align: center;
+    }
+}
+
+#searchpage {
+    span {
+        // Setter tekstfargen til steelBlue
+        color: $steelBlue;
+        // Viser span-elementet som blokkelement
+        display: block;
+        // Legger til padding rundt span-elementet
+        padding: 1rem;
+        // Fjerner padding på toppen
+        padding-top: 0;
+        // Legger til padding nederst
+        padding-bottom: 1.5rem;
+        // Setter display-egenskapen til flex for fleksibel layout
+        display: flex;
+        // Angir at flex-elementene skal pakkes inn ved behov
+        flex-flow: column;
+        // Sentraliserer innholdet vertikalt
+        align-items: center;
+        // Sentraliserer span-elementet horisontalt
+        margin: auto;
+        // Setter skriftstørrelsen til fontSize-small variabelen
+        font-size: $fontSize-small;
+    }
+
+    button {
+        // Nullstiller alle stiler for knappen
+        all: unset;
+        // Angir at knappen skal være klikkbar
+        cursor: pointer;
+        // Setter display-egenskapen til flex for fleksibel layout
+        display: flex;
+        // Setter gap mellom flex-elementene
+        gap: 0.5rem;
+        // Legger til margin på toppen og bunnen
+        margin: 0.2rem;
+        // Sentraliserer innholdet vertikalt
+        align-items: center;
+        // Sentraliserer innholdet horisontalt
+        justify-content: center;
+    }
+
+    .extendedBox {
+        // Setter bakgrunnsfargen til extendedBox-elementet
+        background-color: $platinum;
+    
+        article {
+            // Fjerner skyggeeffekt fra article-elementer inne i extendedBox
+            box-shadow: none;
+        }
+        // Legger til skyggeeffekt for extendedBox-elementet (kilde: https://m3.material.io/)
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+
+    form {
+        // Setter bredden til form-elementet til 88%
+        width: 88%;
+        // Legger til padding rundt form-elementet
+        padding: 1rem;
+        // Sentraliserer form-elementet horisontalt og legger til margin på toppen og bunnen
+        margin: 4rem auto;
+        // Setter bakgrunnsfargen til form-elementet
+        background-color: $smoke;
+
+        label {
+            // Setter skriftstørrelsen til fontSize-small variabelen
+            font-size: $fontSize-small;
+            // Setter tekstfargen til yinMnBlue
+            color: $yinMnBlue;
+        }
+
+        input {
+            // Nullstiller alle stiler for input-elementet
+            all: unset;
+            // Legger til margin rundt input-elementet
+            margin: 0.5rem;
+            // Legger til padding innenfor input-elementet
+            padding: 0.5rem;
+            // Gjør hjørnene på input-elementet avrundede
+            border-radius: 5px;
+            // Setter stilen for grensen til input-elementet
+            border-style: solid;
+            // Setter tykkelsen på grensen til input-elementet
+            border-width: thin;
+            // Setter tekstfargen til yinMnBlue
+            color: $yinMnBlue;
+            // Angir at input-elementet skal være klikkbart
+            cursor: pointer;
+        }
+
+        #findMovie {
+            // Setter bredden til input-elementet med id #findMovie til 80%
+            width: 80%;
+            // Gjør hjørnene på input-elementet avrundede
+            border-radius: 5px;
+            // Setter grensefargen til powderBlue
+            border-color: $powderBlue;
+            // Setter stilen for grensen til solid
+            border-style: solid;
+            // Setter tykkelsen på grensen til thin
+            border-width: thin;
+        }
+
+        #search {
+            // Setter bakgrunnsfargen til knappen med id #search
+            background-color: $yinMnBlue;
+            // Setter tekstfargen til hvit
+            color: $white;
+        }
+
+        #search:hover {
+            // Endrer bakgrunnsfargen til knappen ved hover til steelBlue
+            background-color: $steelBlue;
+        }
+    } 
+}
+
+#searchpage, #genrepage {
+    // Setter display-egenskapen til flex for fleksibel layout
+    display: flex;
+    // Angir at flex-elementene skal pakkes inn ved behov
+    flex-flow: row wrap;
+
+    div, h2, p {
+        // Setter bredden til div, h2 og p-elementene til 100%
+        flex-basis: 100%;
+        // Sentraliserer disse elementene horisontalt
+        margin: auto;
+    }
+
+    // Justerer innholdet til å strekke seg for å fylle containeren
+    align-items: stretch;
+
+    section, article {
+        // Setter høyden til section og article-elementene til 100%
+        height: 100%;
+        // Setter bredden til section og article-elementene til 33%
+        flex-basis: 33%;
+        // Sentraliserer disse elementene horisontalt
+        margin: auto;
+        // Legger til margin nederst
+        margin-bottom: 1.5rem;
+    }
+
+    .extendedBox {
+        // Setter bredden til extendedBox-elementet til 30%
+        flex-basis: 30%;
+    }
+
+    article {
+        // Setter bredden til article-elementet til 29%
+        flex-basis: 29%;
+    }
+}

@@ -1,0 +1,13 @@
+$violet: #7F00FF;
+
+/* Kilde: https://css-tricks.com/how-to-create-neon-text-with-css/ */
+.neonText {
+    color: $white;
+    text-shadow:
+        0 0 7px $white,
+        0 0 10px $violet,
+        0 0 21px $violet,
+        0 0 42px $violet,
+        0 0 82px $violet,
+        0 0 92px $violet,
+}
