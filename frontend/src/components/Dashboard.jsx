@@ -11,33 +11,32 @@ export default function Dashboard() {
     authenticate()
     const { slug } = useParams()
     const [data, setData] = useState()
-
+    // Asynkron funksjon for å hente data basert på parametere
     const fetchData = async (paramObject) => {
         fetchUserSaved(paramObject).then((result) => {console.log("parseData", result)
             setData(parseData(result))
         })
     }
-
+    // useEffect hook for å utføre sideeffekter ved første render
     useEffect(() => {
         const identificator = localStorage.getItem("identificator")
         fetchData(
             {thisUserID: identificator,
-            otherUserID: slug}
+            otherUserID: slug} // Avhengighetsarray inneholder slug, så useEffect kjører på nytt ved endring
         )
     }, [])
-
+    // Funksjon for å parse den hentede dataen og finne felles interesser
     const parseData = (toParse) => {
 
         let sharedWishlist = []
         let sharedFavorites = []
         let mixAndMatch = []
         let sharedGenres = []
-
+         // Funksjon for å finne matchende elementer i to lister
         const findMatches = (arrayToMap, arrayToCompare) => {
             const arrayWithMatches = []
             arrayToMap?.map((thisItem) => {
                 if (arrayToCompare?.find(match => match.name === thisItem.name)) {
-                    //klarer ikke a fa det penere, beklager
                     const whoF = toParse.thisUser.favMovies?.map(movie => movie._id).includes(thisItem._id) ? toParse.thisUser.username : toParse.otherUser.username
                     const whoW = toParse.thisUser.wishedMovies?.map(movie => movie._id).includes(thisItem._id) ? toParse.thisUser.username : toParse.otherUser.username
                     arrayWithMatches.push({_id: thisItem._id, name: thisItem.name, coverURL: thisItem.coverURL, IMDBURL: thisItem.IMDBURL, favedBy: whoF, wishedBy: whoW})
@@ -45,11 +44,13 @@ export default function Dashboard() {
             })
             return arrayWithMatches
         }
-
+        // Finner felles ønskelister
         sharedWishlist = findMatches(toParse.thisUser.wishedMovies, toParse.otherUser.wishedMovies)
+        // Finner felles favoritter
         sharedFavorites = findMatches(toParse.thisUser.favMovies, toParse.otherUser.favMovies)
+        // Finner felles sjangere
         sharedGenres = findMatches(toParse.thisUser.favGenres, toParse.otherUser.favGenres)
-
+        // Finner filmer som er favoritter hos den ene og på ønskelisten til den andre
         mixAndMatch = findMatches(toParse.thisUser.favMovies, toParse.otherUser.wishedMovies)
         .concat(findMatches(toParse.thisUser.wishedMovies, toParse.otherUser.favMovies))
 
@@ -66,7 +67,7 @@ export default function Dashboard() {
         })
 
     }
-
+    // JSX som returnerer UI-komponentene
     return (
         <>
             <section id="dashboard">
